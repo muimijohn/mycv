@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Web Portfolio</title>
+    <style>
+        /* General Page Layout Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:lightblue;
+            color: #333;
+        }
+
+        /* Fixed Navigation Menu at the top */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #add8e6;
+        }
+
+        /* Section Spacing */
+        section {
+            padding-top: 80px; /* Safe distance from the fixed header */
+            margin-bottom: 60px;
+        }
+
+        /* --- HOME SECTION STYLE --- */
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        hr {
+            width: 100%;
+            border: 1px solid #ccc;
+            margin-bottom: 25px;
+        }
+        .bio p {
+            line-height: 1.8; /* Ensures well-spaced content */
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* --- PERSONAL EXPERIENCE SECTION STYLE --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* Border thickness of 1 and colored green */
+            border: 1px solid green; 
+            margin-top: 20px;
+        }
+        th, td {
+            /* Applied border to internal matrix cells */
+            border: 1px solid green; 
+            padding: 12px;
+            text-align: left;
+        }
+        /* Table headers colored light blue */
+        th {
+            background-color: #add8e6; 
+            color: #000;
+        }
+
+        /* --- CONTACTS SECTION STYLE --- */
+        .contact-info p {
+            font-size: 16px;
+            line-height:1px;
+        }
+            .form-group {
+            margin-bottom: 15px;
+        }
+        .checkbox-group input {
+            margin: 0;}
+         /* Styles the green submission button */
+        .send-btn {
+            background-color: #2b702b;
+            color: white;
+            border: none;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .send-btn:hover {
+            background-color: #225622;
+        }
+
+
+6;
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- Shared Navigation Menu -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#experience">Personal Experience</a>
+        <a href="#contacts">Contacts</a>
+        <a href="#hobbies">Hobbies</a>
+    </nav>
+
+    <!-- (a) HOME SECTION -->
+    <section id="home">
+        <div class="profile-container">
+            <!-- Photo placed cleanly on the top left -->
+            <img src="myphoto.jpg" alt="Profile Picture Placeholder" class="profile-pic" height="150" weight="130";>
+            
+            <!-- Horizontal rule directly below the photo -->
+            <hr>
+
+            <!-- Neatly structured and well-spaced bio details -->
+            <div class="bio">
+                <h1>About Me</h1>
+                <p><strong>Name:</strong> John muimi</p>
+                <p><strong>Course Offering:</strong> Bachelor of Science in Information Technology</p>
+                <p><strong>Background:</strong> I possess an analytical mind with deep curiosity for system designs, algorithms, and computing hardware setups. Prior to this program, I experimented with styling static pages and general programming structures.</p>
+                <p><strong>Future Aspirations:</strong> Upon finishing my course, I aim to break into the industry as a Professional Software Engineer specializing in backend infrastructure architecture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- (b) PERSONAL EXPERIENCE SECTION -->
+    <section id="experience">
+        <h2>Personal Experience</h2>
+        <p>A brief outline of my timeline and background accomplishments:</p>
+        
+        <!-- CV layout with exactly THREE COLUMNS -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Institutions attended</th>
+                    <th>Awards given</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-2028</td>
+                    <td>kisii university</td>
+                    <td>Dean's Honor List Placement</td>
+                </tr>
+                <tr>
+                    <td>2020 - 2024</td>
+                    <td>MOI High School</td>
+                    <td>Valedictorian / National Science Fair Merit</td>
+                </tr>
+                <tr>
+                    <td>2009-2019</td>
+                    <td>ST DAN  Academy Boot Camp</td>
+                    <td>Outstanding Capstone Web Project Award</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- (c) CONTACTS SECTION -->
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <div class="contact-info">
+            <p><strong>Phone Support:</strong> 0791849227</p>
+            <p><strong>Office Location:</strong> 742 Evergreen Terrace, Sector 7G</p>
+            
+            <!-- Link that invokes a mailing application when clicked -->
+            <p><a href= mailto:mercykaluu769@gmil.com>EMAIL ME</a>
+                
+            </p>
+        </div>
+    </section>
+
+    <!-- HOBBIES SECTION (Placeholder link target requested on menu layout) -->
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Web development and open-source contribution</li>
+            <li>Chess and strategy-based gaming</li>
+            <li>Hiking and nature photography</li>
+        </ul>
+    </section>
+    <div class="form-group">
+        <label for="name">Enter your Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail address*:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="subject">Message subject:</label>
+        <input type="text" id="subject" name="subject">
+    </div>
+    <div class="form-group">
+        <label for="Message">enter your message*</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+
+    <div class="checkbox-group">
+                <input type="checkbox" id="copy" name="send_copy">
+                <label for="copy" style="font-weight: normal; display: inline;">E-mail a copy of this message to your own address.</label>
+            </div>
+
+            <button type="submit" class="send-btn">Send</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
